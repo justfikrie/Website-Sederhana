@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="header">
+  <h1><img src="images/ttc.jpg" height="300" width="1200"></h1>
+  <p>49th and 11th, Hell's Kitchen, New York</p>
+  <p>Phone. 555 234786</p>
+</div>
+<br>
+
+<div class="navbar">
+  <a href="#home">Beranda</a>
+  <a href="#news">Berita</a>
+  <div class="dropdown">
+    <button class="dropbtn">Produk 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Produk 1</a>
+      <a href="#">Produk 2</a>
+      <a href="#">Produk 3</a>
+    </div>
+  </div>
+  <a href="login.html">Login</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <center>
+	  <form method="POST" name="frmpost" action="">
+	  <table width="500" border="1" cellpadding="0" cellspacing="0" align="center">
+	   <tr>
+	    <th><h2>Form Pemesanan</h2></th>
+	   </tr>
+	   <tr>
+		<tr>
+		 <td>
+		  <table width="500" border="0" cellpadding="6" cellspacing="6" align="center">
+		  
+		   <tr height="30">
+			<td width="200" valign="center">Nama Customer</td>
+			<td width="10" valign="center"> : </td>
+			<td><input name="namcus[]" type="text" size="20"/></td>
+		   </tr>
+		   
+		   <tr height="30">
+			<td width="200" valign="center">Alamat Customer</td>
+			<td width="10" valign="center"> : </td>
+			<td><input name="alamat[]" type="text" size="70"/></td>
+		   </tr>
+		   
+		   <tr height="30">
+			<td width="200" valign="center">Nama Produk</td>
+			<td width="10" valign="center"> : </td>
+			<td>
+			<select name="tipe">
+			<option name="-" value="-" hidden>-</option>
+			<option name="produk1" value="produk1">Produk 1</option>
+			<option name="produk2" value="produk2">Produk 2</option>
+			</select>
+			</td>
+		   </tr>
+		   
+		   <tr height="30">
+			<td width="200" valign="center">Jumlah</td>
+			<td width="10" valign="center"> : </td>
+			<td><input name="jumlah[]" type="text" size="10"/></td>
+		   </tr>
+		   
+		   <tr>
+		    <td align="right" colspan="2"><input type="submit" name="btnOk" value="Simpan" /></td>
+			<td><input type="reset" name="btnCancel" value="Cancel" /></td>
+		   </tr>
+			
+		</table>
+		</table>		   
+	  </center>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Judul Deskripsi, Feb 23, 2020</h5>
+      <center><div>
+        <a href="#">
+        <img src="images/clothstore.jpg" width="30%" padding="20px">
+        </a>
+        <a href="#">
+        <img src="images/atrium_new_york_sunny_facer_noho_dtstore3__large.jpg" width="30%" padding="20px">
+        </a>
+        <a href="#">
+        <img src="images/clothstore.jpg" width="30%" padding="20px">
+        </a>
+      </div></center>
+      <p>Title</p>
+      <p>Deskripsi Gambar</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Us</h2>
+      <div>
+        <center></center>
+      </div>
+      <p>Tentang Kami</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div>
+        <center><img src="images/clothstore.jpg" width="200" height="150"></center>
+      </div>
+      <div>
+        <center><img src="images/atrium_new_york_sunny_facer_noho_dtstore3__large.jpg" width="200" height="150"></center>
+      </div>
+      <div>
+        <center><img src="images/clothstore.jpg" width="200" height="150"></center>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Social Media</p>
+	  <center><div>
+        <a href="#">
+        <img src="images/wa.png" width="20%" padding="20px">
+        </a>
+        <a href="#">
+        <img src="images/ig.png" width="20%" padding="20px">
+        </a>
+        <a href="#">
+        <img src="images/fb.png" width="20%" padding="20px">
+		<a href="#">
+        <img src="images/twitter.png" width="20%" padding="20px">
+        </a>
+        </a>
+      </div></center>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+</body>
+</html>
